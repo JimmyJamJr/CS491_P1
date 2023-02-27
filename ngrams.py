@@ -39,7 +39,11 @@ def train_ngram(train_data, n):
 
 
 def generate_language(ngram_model, max_words):
+    n = len(list(ngram_model.keys())[0])
+    print(n)
+    current_index = 0
     generated = "<s>"
+
 
 
 def calculate_probability(utterance, ngram_model):
@@ -47,6 +51,6 @@ def calculate_probability(utterance, ngram_model):
 
 
 train_data = load_data('data1.txt')
-print(train_data)
 model = train_ngram(train_data, 2)
 print(model)
+generate_language(model, 10)
