@@ -4,7 +4,6 @@ import random
 def create_automata(option: int) -> dict:
     dfa = {}
     if option == 1:
-        dfa["states"] = ["q0", "q1", "q2", "q3"]
         dfa["alphabet"] = ['a', 'b']
         dfa["finals"] = [3]
         transitions = [
@@ -15,7 +14,6 @@ def create_automata(option: int) -> dict:
         ]
         dfa["transitions"] = transitions
     elif option == 2:
-        dfa["states"] = ["q0", "q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8"]
         dfa["alphabet"] = ['a', 'b']
         dfa["finals"] = [4, 8]
         transitions = [
@@ -34,7 +32,6 @@ def create_automata(option: int) -> dict:
         dfa["alphabet"] = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
                            "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen",
                            "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"]
-        dfa["states"] = ["q0", "q1", "q2"]
         dfa["finals"] = [1, 2]
         transitions = [[1 for i in range(20)] + [2 for i in range(20, len(dfa["alphabet"]))]]
         transitions.append([-1 for i in range(len(dfa["alphabet"]))])
