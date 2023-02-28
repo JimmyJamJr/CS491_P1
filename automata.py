@@ -1,3 +1,7 @@
+# Jimson Huang
+# CS 491 - NLP
+# Project 1
+
 import random
 
 
